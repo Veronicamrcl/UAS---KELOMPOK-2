@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "author" content = "Veronica Marcella Angela Simalngo 2172042">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Soal 2</title>
+    <style>
+        #hasil {
+            overflow: auto;
+            height: 500px;
+            background-color: black;
+            color: white;
+        }
+        #foto {
+            border: 1px solid orange ;
+            border-radius: 10px;
+            width: 80px; 
+            position: relative;
+            z-index: 2;
+
+        }
+        img {
+            width: 80px;
+            z-index: 2;
+        }
+        #nama {
+            position: relative;
+            bottom: 40px;
+            left: 70px;
+            font-size: xx-large;
+            color: gold; 
+            font-style: bold;
+            background-color: rgb(204, 173, 37);
+            z-index: 1;
+            padding-left: 15px;
+
+        }
+        #desc {
+            position: relative;
+            bottom: 40px;
+            left: 90px;
+            border-bottom: 1px solid gold;
+            border-left: 1px solid gold  ;
+            border-right:1px solid gold ;
+        }
+        #tombol { 
+            margin-right: auto;
+            margin-left: auto;
+            width: 1250px;
+            margin-bottom: 10px;
+            align-content: center;
+
+
+        }
+    </style>
+</head>
+<body>
+    <button onclick="hero()" id="tombol">find me 3 random champion</button>
+    <div id="hasil"></div>
+    <script>
+         function hero() {
+            $.getJSON("league.json", function (result) {
+            for(i=1; i<=3; i++){
+                let a = Math.floor(Math.random()*result.length)
+                $("#hasil").append("<div id='foto'><img src='"+ result[a].icon +"'> </div>")
+                $("#hasil").append("<div id='nama'>"+ result[a].id +" </div>")
+                $("#hasil").append("<div id='desc'>"+ result[a].description +" </div>")
+            }
+        }) 
+         }
+    </script>
+
+</body>
+</html>
