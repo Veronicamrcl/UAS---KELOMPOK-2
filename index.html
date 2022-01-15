@@ -22,6 +22,7 @@
                 
                 let a = document.querySelector("#browser").value
                 if(a==result.results[i].name){
+                $("#hasil").append("<div class='bag foto' ><img src='"+result.results[i].image +"'> </div>") 
                 $("#hasil").append("<div id='nama'> Nama "+result.results[i].name + "  </div>")
                 $("#hasil").append("<div id='status'>Status "+result.results[i].status + " </div>")
                 $("#hasil").append("<div id='spesies'>Spesies "+result.results[i].species+" </div>")
