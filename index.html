@@ -11,20 +11,20 @@
     <script>
 
          $.getJSON("https://rickandmortyapi.com/api/character", function (result) {
-            for(i=1; i<result.results.length; i++){
-                $("#browsers").append("<option value='"+ result.results.name +"'>")
+            for(i=0; i<result.results.length; i++){
+                $("#browsers").append("<option value='"+ result.results[i].name +"'>")
             }
         }) 
         
         function character() {
             $.getJSON("https://rickandmortyapi.com/api/character", function (result) {
-            for(i=1; i<result.results.length; i++){
+            for(i=0; i<result.results.length; i++){
                 
                 let a = document.querySelector("#browser").value
                 if(a==result.results[i].name){
                 $("#hasil").append("<div id='nama'> Nama "+result.results[i].name + "  </div>")
-                $("#hasil").append("<div id='status'>Status "+result.results[i].staus + " </div>")
-                $("#hasil").append("<div id='spesies'>Spesies "+result.results[i].spesies+" </div>")
+                $("#hasil").append("<div id='status'>Status "+result.results[i].status + " </div>")
+                $("#hasil").append("<div id='spesies'>Spesies "+result.results[i].species+" </div>")
                 }
             
             }
