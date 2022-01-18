@@ -1,0 +1,44 @@
+.bag {
+    
+    font-size: x-large;
+    font-weight: bolder;
+    border: 2px solid lightskyblue ;
+    position: relative;
+    top: 40px;
+    }
+
+a{
+    text-decoration:none; color: whitesmoke;
+   
+}
+a:hover{color: gold; transition: 0.3s;}
+
+#atas {
+    background-color: lightslategray;
+    margin: 0px; 
+    padding: 5px;
+    text-align: right;
+    height: 25px; 
+    position: absolute;
+    left: 0px; top: 0px; right: 0px;
+
+    
+}
+
+fieldset {
+    position: relative;
+    top: 40px;
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#time{
+    float: right;
+    position: relative;
+    font-weight: bold;
+    }
+
+body {
+    background-color: lightgrey;
+}
