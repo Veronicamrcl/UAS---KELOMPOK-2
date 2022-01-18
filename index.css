@@ -21,6 +21,7 @@ a:hover{color: gold; transition: 0.3s;}
     height: 25px; 
     position: absolute;
     left: 0px; top: 0px; right: 0px;
+    z-index: 1;
 
     
 }
@@ -38,7 +39,10 @@ fieldset {
     position: relative;
     font-weight: bold;
     }
-
+#logo{
+    position: absolute;
+    z-index: 3;
+}
 body {
     background-color: lightgrey;
 }
