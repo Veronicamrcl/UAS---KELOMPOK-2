@@ -38,6 +38,8 @@ fieldset {
     float: right;
     position: relative;
     font-weight: bold;
+    z-index: 3;
+    top: 40px;
     }
 #logo{
     position: absolute;
