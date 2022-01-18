@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
-    <style>
-    #time{
-        float: right;
-        position: relative;
-        font-weight: bold;
-        }
-</style>
 <body>
     <span id="time"></span> 
     <img src="assets/RickAndMortyLogo.png" width="160" height="62">
+
+    <div id="atas">
+        <a href="index.html">HOME</a> &nbsp;
+        <a href="index2.html">A</a> &nbsp;
+        <a href="index3.html">B</a> &nbsp;
+    </div>
+
     <script>
 
          $.getJSON("https://rickandmortyapi.com/api/character", function (result) {
@@ -32,14 +33,13 @@
                 let a = document.querySelector("#browser").value
                 if(a==result.results[i].name){
                 $("#hasil").append("<div class='bag foto' ><img src='"+result.results[i].image +"'> </div>") 
-                $("#hasil").append("<div id='nama'> Nama "+result.results[i].name + "  </div>")
-                $("#hasil").append("<div id='status'>Status "+result.results[i].status + " </div>")
-                $("#hasil").append("<div id='spesies'>Spesies "+result.results[i].species+" </div>")
+                $("#hasil").append("<div class='bag nama'> Nama: "+result.results[i].name + "  </div>")
+                $("#hasil").append("<div class='bag status'>Status: "+result.results[i].status + " </div>")
+                $("#hasil").append("<div class='bag spesies'>Spesies: "+result.results[i].species+" </div>")
                 }
             
             }
         }) 
-         }
         var span = document.getElementById('time');
         function time() {
             var d = new Date();
@@ -49,18 +49,23 @@
             span.textContent = 
             ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
         }
-        setInterval(time, 1000);      
+        setInterval(time, 1000);
+         }
+            
+            
     </script>
+        <fieldset>
+        <label for="browser">Name:</label>
+        <input list="browsers" name="browser" id="browser">
 
-    <label for="browser">Name:</label>
-    <input list="browsers" name="browser" id="browser">
+        <datalist id="browsers">
 
-    <datalist id="browsers">
+        </datalist>
+        <button onclick="character()">Search</button>
+        <div id="hasil"></div>
+    </fieldset> 
 
-    </datalist>
-    <button onclick="character()">Search</button>
-
-    <div id="hasil"></div>
+    
 
 </body>
 </html>
