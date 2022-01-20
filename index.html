@@ -10,10 +10,9 @@
 </head>
 <body>
     <span id="time"></span> 
-    <img src="assets/RickAndMortyLogo.png" width="160" height="62" id="logo">
+    <a href="index.html"><img src="assets/RickAndMortyLogo.png" width="160" height="62" id="logo"></a>
 
     <div id="atas">
-        <a href="index.html">HOME</a> &nbsp;
         <a href="index2.html">INFO</a> &nbsp;
         <a href="index3.html">MORE</a> &nbsp;
     </div>
@@ -53,9 +52,9 @@
             span.textContent = 
             ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
         }
-        setInterval(time, 1000);      
-        </script>
-    
+        setInterval(time, 1000); 
+            
+    </script>
         <fieldset>
         <label for="browser">Name:</label>
         <input list="browsers" name="browser" id="browser">
