@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <a href="index.html"><img src="assets/RickAndMortyLogo.png" width="160" height="62" id="logo"></a>
-
-    <div id="atas">
-        <a href="index2.html">INFO</a> &nbsp;
-        <a href="index3.html">MORE</a> &nbsp;
-    </div>
-
-    <div>
-        <a href = "https://twitter.com/RickandMorty">TWITTER</a> 
-        <a href = "https://www.instagram.com/rickandmorty/">INSTAGRAM</a> 
-        <a href = "https://en.wikipedia.org/wiki/Rick_and_Morty">WIKIPEDIA</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Document</title>
+        <style>
+            #time{
+                float: right;
+                position: relative;
+                font-weight: bold;
+                z-index: 3;
+            }
+        </style>
+    </head>
+    <body>
+      <span id="time"></span> 
+         <a href="index.html">
+            <img src="assets/RickAndMortyLogo.png" width="160" height="62">
+        </a><br>
+        <script>
+        var span = document.getElementById('time');
+        function time() {
+            var d = new Date();
+            var s = d.getSeconds();
+            var m = d.getMinutes();
+            var h = d.getHours();
+            span.textContent = 
+            ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
+        }
+        setInterval(time, 1000);   
+    </script>
+    <script>
         
-    </div>
-</body>
+    </script>
+    </body>
 </html>
