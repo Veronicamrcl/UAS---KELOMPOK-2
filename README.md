@@ -11,3 +11,5 @@ https://rickandmorty.fandom.com/wiki/Rickipedia
 https://en.wikipedia.org/wiki/Rick_and_Morty_(season_1)
 
 https://www.imdb.com/title/tt2861424/
+
+https://www.denofgeek.com/tv/rick-and-morty-voice-actors-guide/
