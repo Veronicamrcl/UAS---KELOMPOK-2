@@ -1,0 +1,55 @@
+body {
+    background-image: url("assets/ground.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#time{
+    float: right;
+    position: relative;
+    font-weight: bold;
+    z-index: 3;
+}
+
+#atas {
+    background-color: lightblue;
+    margin: 0px; 
+    padding: 30px;
+    text-align: right;
+    height: 20px; 
+    position: absolute;
+    left: 0px; top: 0px; right: 0px;
+    z-index: 1;
+}
+
+a{
+    text-decoration:none; color: black;
+    font-weight: bold;
+   
+}
+a:hover{color: gold; transition: 0.3s;}
+
+#logo{
+    position: absolute;
+    z-index: 3;
+
+}
+
+fieldset {
+    position: relative;
+    top: 60px;
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: cadetblue;
+}
+
+#hasil {
+    background-color: cadetblue;
+    position: relative;
+    top: 70px;
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
