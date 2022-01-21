@@ -9,37 +9,35 @@
     <title>Rick And Morty</title>
 </head>
 <body>
-    <span id="time"></span> 
+     
     <a href="index.html"><img src="assets/RickAndMortyLogo.png" width="160" height="62" id="logo"></a>
 
     <div id="atas">
         <a href="index2.html">INFO</a> &nbsp;
         <a href="index3.html">MORE</a> &nbsp;
+        <span id="time"></span>
     </div>
 
     <script>
 
-         $.getJSON("https://rickandmortyapi.com/api/character", function (result) {
-            for(i=0; i<result.results.length; i++){
-                $("#browsers").append("<option value='"+ result.results[i].name +"'>")
-            }
-        }) 
-        
-        function character() {
             $.getJSON("https://rickandmortyapi.com/api/character", function (result) {
             for(i=0; i<result.results.length; i++){
                 
-                let a = document.querySelector("#browser").value
+                $("#hasil").append("<div class='bag foto'  onclick=info('"+i+"') ><img src='"+result.results[i].image +"'><p id='foto"+i+"'>"+ result.results[i].name+"</p> </div>") 
+             } 
+        })
+            function info(id){
+                $.getJSON("https://rickandmortyapi.com/api/character", function (result)  {
+            for(i=1; i<result.results.length; i++){
+                let a = document.querySelector("#foto"+id).innerHTML
                 if(a==result.results[i].name){
-                $("#hasil").append("<div class='bag foto' ><img src='"+result.results[i].image +"'> </div>") 
-                $("#hasil").append("<div class='bag nama'> Nama: "+result.results[i].name + "  </div>")
-                $("#hasil").append("<div class='bag status'>Status: "+result.results[i].status + " </div>")
-                $("#hasil").append("<div class='bag spesies'>Spesies: "+result.results[i].species+" </div>")
+                $("#info").append("<div id='kota'> name "+result.results[i].name + " </div>")
+                $("#info").append("<div id='negara'>status "+result.results[i].status + " </div>")
+                $("#info").append("<div id='koor'>species "+result.results[i].species+" </div>")
                 }
-            
             }
         }) 
-        }
+            }
         </script>
         
         <script>
@@ -55,17 +53,9 @@
         setInterval(time, 1000); 
             
     </script>
-        <fieldset>
-        <label for="browser">Name:</label>
-        <input list="browsers" name="browser" id="browser">
-
-        <datalist id="browsers">
-
-        </datalist>
-        <button onclick="character()">Search</button>
+        
         <div id="hasil"></div>
-    </fieldset> 
-
+        <div id="info"></div>
     
 
 </body>
