@@ -5,21 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <title>Document</title>
-        <style>
-            #time{
-                float: right;
-                position: relative;
-                font-weight: bold;
-                z-index: 3;
-            }
-        </style>
+        <link rel="stylesheet" href="index2.css">
+        <title>INFO</title>
+
     </head>
     <body>
-      <span id="time"></span> 
+    
          <a href="index.html">
-            <img src="assets/RickAndMortyLogo.png" width="160" height="62">
+            <img src="assets/RickAndMortyLogo.png" width="160" height="62" id="logo">
         </a><br>
+        <div id="atas">
+            <a href="index2.html">INFO</a> &nbsp;
+            <a href="index3.html">MORE</a> &nbsp; &nbsp;
+            <span id="time"></span>
+        </div>
         <script>
         var span = document.getElementById('time');
         function time() {
@@ -33,7 +32,35 @@
         setInterval(time, 1000);   
     </script>
     <script>
+        $.getJSON("info.json", function (result) {
+            for(i=0; i<result.results.length; i++){
+                $("#browsers").append("<option value='"+ result.results[i].info +"'>")
+            }
+        }) 
         
+        function data(){
+            $.getJSON("info.json", function (result)  {
+            for(i=0; i<result.results.length; i++){
+                let a = document.querySelector("#browser").value
+                if(a==result.results[i].info){
+                $("#hasil").append("<div class='bag info'> "+result.results[i].info + ":" + result.results[i].name + " </div>")
+                $("#hasil").append("<div class='bag more'>"+result.results[i].more + " </div>")
+                }
+            }
+        }) 
+        
+        }
     </script>
+
+    <fieldset> 
+    <label for="browser">about:</label>
+    <input list="browsers" name="browser" id="browser">
+
+    <datalist id="browsers">
+
+    </datalist>
+    <button onclick="data()">Submit Query</button>
+    </fieldset>
+    <div id="hasil"></div>
     </body>
 </html>
