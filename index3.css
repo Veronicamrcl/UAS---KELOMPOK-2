@@ -4,3 +4,21 @@ html{
 a{
     cursor: url('assets/rickcursor2.png'), pointer; 
 }
+
+#atas {
+    background-color: lightblue;
+    margin: 0px; 
+    padding: 30px;
+    text-align: right;
+    height: 20px; 
+    position: absolute;
+    left: 0px; top: 0px; right: 0px;
+    z-index: 1;
+}
+
+a{
+    text-decoration:none; color: black;
+    font-weight: bold;
+   
+}
+a:hover{color: gold; transition: 0.3s;}
