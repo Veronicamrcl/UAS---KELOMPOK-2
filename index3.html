@@ -4,29 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index3.css">
     <title>Document</title>
 </head>
-<style>
-    html{
-    cursor: url('assets/rickcursor1.png'), default; 
-    }
-    a{
-        cursor: url('assets/rickcursor2.png'), pointer; 
-    }
-</style>
 <body>
-    <a href="index.html"><img src="assets/RickAndMortyLogo.png" width="160" height="62" id="logo"></a>
+    <a href="index.html">
+        <img src="assets/RickAndMortyLogo.png" width="160" height="62" id="logo">
+    </a>
 
     <div id="atas">
         <a href="index2.html">INFO</a> &nbsp;
         <a href="index3.html">MORE</a> &nbsp;
+        <span id="time"></span>
     </div>
-
+    <br><br><br><br>
     <div>
+        <h2 align='center'>Meet the voices of Rick and Morty</h2>
+        
         <a href = "https://twitter.com/RickandMorty">TWITTER</a> 
         <a href = "https://www.instagram.com/rickandmorty/">INSTAGRAM</a> 
         <a href = "https://en.wikipedia.org/wiki/Rick_and_Morty">WIKIPEDIA</a>
         
     </div>
+    <script>
+        var span = document.getElementById('time');
+        function time() {
+            var d = new Date();
+            var s = d.getSeconds();
+            var m = d.getMinutes();
+            var h = d.getHours();
+            span.textContent = 
+            ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
+        }
+        setInterval(time, 1000);   
+    </script>
 </body>
 </html>
