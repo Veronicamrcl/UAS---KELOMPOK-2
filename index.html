@@ -23,7 +23,7 @@
             $.getJSON("https://rickandmortyapi.com/api/character", function (result) {
             for(i=0; i<result.results.length; i++){
                 
-                $("#hasil").append("<div class='bag foto'  onclick=info('"+i+"') ><img src='"+result.results[i].image +"'><p id='foto"+i+"'>"+ result.results[i].name+"</p> </div>") 
+                $("#hasil").append("<div class='bag foto'  onclick=info('"+i+"') ><img src='"+result.results[i].image +"'><p align='center' id='foto"+i+"'>"+ result.results[i].name+"</p> </div>") 
              } 
         })
             function info(id){
