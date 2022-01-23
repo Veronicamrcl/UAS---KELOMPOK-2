@@ -22,3 +22,16 @@ a{
    
 }
 a:hover{color: gold; transition: 0.3s;}
+
+#time{
+    float: right;
+    position: relative;
+    font-weight: bold;
+    z-index: 3;
+}
+
+#logo{
+    position: absolute;
+    z-index: 3;
+
+}
