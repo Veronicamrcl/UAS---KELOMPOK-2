@@ -14,6 +14,7 @@
 
 a{
     text-decoration:none; color: whitesmoke;
+    font-weight: bold;
    
 }
 a:hover{color: gold; transition: 0.3s;}
@@ -23,7 +24,7 @@ a:hover{color: gold; transition: 0.3s;}
     margin: 0px; 
     padding: 5px;
     text-align: right;
-    height: 25px; 
+    height: 65px; 
     position: absolute;
     left: 0px; top: 0px; right: 0px;
     z-index: 1;
@@ -32,6 +33,7 @@ a:hover{color: gold; transition: 0.3s;}
 }
 
 #time{
+    color: whitesmoke;
     float: right;
     position: relative;
     font-weight: bold;
