@@ -67,3 +67,5 @@ https://i1.sndcdn.com/avatars-000477286269-e698fm-t240x240.jpg
 https://static.wikia.nocookie.net/stargirltv/images/8/81/KeithDavid.jpg/revision/latest?cb=20211103025934
 
 https://static.wikia.nocookie.net/rickandmorty/images/b/b1/President205.png/revision/latest/top-crop/width/360/height/360?cb=20210827144629
+
+https://stackoverflow.com/questions/53037271/how-to-change-image-on-hover-of-multiple-images
