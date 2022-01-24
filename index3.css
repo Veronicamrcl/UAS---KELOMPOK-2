@@ -35,3 +35,12 @@ a:hover{color: gold; transition: 0.3s;}
     z-index: 3;
 
 }
+
+.portrait{
+    height: 240px;
+    width: 190px;
+}
+
+th{
+    font-size: 13px
+}
