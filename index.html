@@ -23,7 +23,7 @@
             $.getJSON("https://rickandmortyapi.com/api/character", function (result) {
             for(i=0; i<result.results.length; i++){
                 
-                $("#hasil").append("<div class='bag foto'  onclick=info('"+i+"') ><img src='"+result.results[i].image +"'><p align='center' id='foto"+i+"'>"+ result.results[i].name+"</p> </div>") 
+                $("#hasil").append("<div class='image'  onclick=info('"+i+"') ><img src='"+result.results[i].image +"'><p align='center' id='foto"+i+"'>"+ result.results[i].name+"</p> </div>") 
              } 
         })
             function info(id){
@@ -31,9 +31,10 @@
             for(i=1; i<result.results.length; i++){
                 let a = document.querySelector("#foto"+id).innerHTML
                 if(a==result.results[i].name){
-                $("#info").append("<div id='kota'> name "+result.results[i].name + " </div>")
-                $("#info").append("<div id='negara'>status "+result.results[i].status + " </div>")
-                $("#info").append("<div id='koor'>species "+result.results[i].species+" </div>")
+                $("#info").append("<div class ='bag nama'>Name: "+result.results[i].name + " </div>")
+                $("#info").append("<div class ='bag status'>Status: "+result.results[i].status + " </div>")
+                $("#info").append("<div class ='bag spesies'>Species: "+result.results[i].species+" </div>")
+                $("#info").append("<div class ='bag gender'>Gender: "+result.results[i].gender+" </div>")
                 }
             }
         }) 
