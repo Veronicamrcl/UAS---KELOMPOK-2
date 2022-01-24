@@ -17,3 +17,5 @@ https://www.denofgeek.com/tv/rick-and-morty-voice-actors-guide/
 https://cutecursors.com/images/packs/92.png
 
 http://assets.stickpng.com/images/58f37720a4fa116215a9240f.png
+
+https://stackoverflow.com/questions/5841424/smooth-transition-between-html-pages
