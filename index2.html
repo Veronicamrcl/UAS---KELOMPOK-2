@@ -18,8 +18,25 @@
             <a href="index2.html">INFO</a> &nbsp;
             <a href="index3.html">MORE</a> &nbsp; &nbsp;
             <span id="time"></span>
+            <div id="judul"></div>
         </div>
         <script>
+
+        function judul(){
+                document.querySelector("#judul").innerHTML="";
+                for(let i=1;i<12;i++){
+                setTimeout(jalan,500*i);
+                function jalan(){
+                let jdl="INFORMATION";
+                let slice=jdl.slice(0,i);
+                document.querySelector("#judul").innerHTML=slice;
+                i++;
+                }
+            }
+        }
+        judul();
+        setInterval(judul,500*12);
+
         var span = document.getElementById('time');
         function time() {
             var d = new Date();
@@ -30,8 +47,7 @@
             ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
         }
         setInterval(time, 1000);   
-    </script>
-    <script>
+
         $.getJSON("info.json", function (result) {
             for(i=0; i<result.results.length; i++){
                 $("#browsers").append("<option value='"+ result.results[i].info +"'>")
@@ -59,7 +75,7 @@
     <datalist id="browsers">
 
     </datalist>
-    <button onclick="data()">Submit Query</button>
+    <button onclick="data()">Search</button>
     </fieldset>
     <div id="hasil"></div>
     </body>
