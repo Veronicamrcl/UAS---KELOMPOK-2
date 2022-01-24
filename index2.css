@@ -60,3 +60,17 @@ fieldset {
     font-weight: bold;
     padding-bottom: 10px;
 }
+
+html{
+    cursor: url('assets/rickcursor1.png'), default; 
+}
+a{
+    cursor: url('assets/rickcursor2.png'), pointer; 
+}
+
+#judul {
+    text-align: center;
+    color:black;
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
