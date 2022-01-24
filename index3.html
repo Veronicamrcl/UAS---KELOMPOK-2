@@ -11,16 +11,37 @@
     <a href="index.html">
         <img src="assets/RickAndMortyLogo.png" width="160" height="62" id="logo">
     </a>
-
     <div id="atas">
         <a href="index2.html">INFO</a> &nbsp;
         <a href="index3.html">MORE</a> &nbsp;
         <span id="time"></span>
     </div>
-    <br><br><br><br>
-    <div>
-        <h2 align='center'>Meet the voices of Rick and Morty</h2>
-        
+    <br><br><br>
+    <div align='center'>
+        <h2>Meet the main voices of Rick and Morty</h2>
+        <table>
+            <tr>
+                <th>Justin Roiland as <br> Rick Sanchez and Morty Smith</th>
+                <th>Dan Harmon as <br> Birdperson</th>
+                <th>Chris Parnell as <br>  Jerry Smith</th>
+            </tr>
+            <tr>
+                <td><img src="assets/JustinRoiland.jpg" class="portrait" id="img1" onmouseover="hover1()" onmouseout="offhover1()"></td>
+                <td><img src="assets/DanHarmon.jpg" class="portrait" id="img2" onmouseover="hover2()" onmouseout="offhover2()"></td>
+                <td><img src="assets/ChrisParnell.jpg" class="portrait" id="img3" onmouseover="hover3()" onmouseout="offhover3()"></td>
+            </tr>
+            <tr>
+                <th>Spencer Grammer as <br>  Summer Smith</th>
+                <th>Sarah Chalke as <br>  Beth Smith</th>
+                <th>Kari Wahlgren as <br>  Jessica</th>
+            </tr>
+            <tr>
+                <td><img src="assets/SpencerGrammer.jpg" class="portrait" id="img4" onmouseover="hover4()" onmouseout="offhover4()"></td>
+                <td><img src="assets/SarahChalke.jpg" class="portrait" id="img5" onmouseover="hover5()" onmouseout="offhover5()"></td>
+                <td><img src="assets/KariWahlgren.jpg" class="portrait" id="img6" onmouseover="hover6()" onmouseout="offhover6()"></td>
+            </tr>
+        </table>
+        </table>
         <a href = "https://twitter.com/RickandMorty">TWITTER</a> 
         <a href = "https://www.instagram.com/rickandmorty/">INSTAGRAM</a> 
         <a href = "https://en.wikipedia.org/wiki/Rick_and_Morty">WIKIPEDIA</a>
@@ -37,6 +58,43 @@
             ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
         }
         setInterval(time, 1000);   
+
+    function hover1() {
+      document.getElementById("img1").src = "assets/RickMorty.jpg";
+    }
+    function offhover1() {
+      document.getElementById("img1").src = "assets/JustinRoiland.jpg";
+    }
+    function hover2() {
+      document.getElementById("img2").src = "assets/Birdperson.png";
+    }
+    function offhover2() {
+      document.getElementById("img2").src = "assets/DanHarmon.jpg";
+    }
+    function hover3() {
+      document.getElementById("img3").src = "assets/JerrySmith.png";
+    }
+    function offhover3() {
+      document.getElementById("img3").src = "assets/ChrisParnell.jpg";
+    }
+    function hover4() {
+      document.getElementById("img4").src = "assets/SummerSmith.jpg";
+    }
+    function offhover4() {
+      document.getElementById("img4").src = "assets/SpencerGrammer.jpg"; 
+    }
+    function hover5() {
+      document.getElementById("img5").src = "assets/BethSmith.png";
+    }
+    function offhover5() {
+      document.getElementById("img5").src = "assets/SarahChalke.jpg";
+    }
+    function hover6() {
+      document.getElementById("img6").src = "assets/Jessica.png";
+    }
+    function offhover6() {
+      document.getElementById("img6").src = "assets/KariWahlgren.jpg"; 
+}
     </script>
 </body>
 </html>
