@@ -1,4 +1,4 @@
-.bag {
+.image {
     
     font-size: x-large;
     font-weight: bolder;
@@ -63,4 +63,9 @@ body {
     position: relative;
     top: 100px;
 
+}
+.bag {
+    font-weight: bold;
+    text-align: center;
+    font-size: xx-large;
 }
