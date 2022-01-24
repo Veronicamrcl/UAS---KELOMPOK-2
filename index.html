@@ -28,7 +28,7 @@
         })
             function info(id){
                 $.getJSON("https://rickandmortyapi.com/api/character", function (result)  {
-            for(i=1; i<result.results.length; i++){
+            for(i=0; i<result.results.length; i++){
                 let a = document.querySelector("#foto"+id).innerHTML
                 if(a==result.results[i].name){
                 $("#info").append("<div class ='bag nama'>Name: "+result.results[i].name + " </div>")
