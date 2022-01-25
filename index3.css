@@ -44,3 +44,7 @@ a:hover{color: gold; transition: 0.3s;}
 th{
     font-size: 13px
 }
+
+body{
+    background-color: lightgrey;
+}
