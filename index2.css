@@ -43,16 +43,18 @@ fieldset {
     margin-left: auto;
     background-color: lightslategray;
     color:lightyellow;
+    font-size: x-large;
 }
 
 #hasil {
     background-color: lightslategray;
     position: relative;
-    top: 70px;
+    top: 100px;
     width: 500px;
     margin-right: auto;
     margin-left: auto;
     color:lightyellow;
+    font-size: x-large;
 
 }
 
